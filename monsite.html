@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abdessamad HSSINI | Portfolio - Étudiant en BUT Informatique</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc;
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(148, 163, 184, 0.1);
+        }
+        .modal-backdrop {
+            background: rgba(2, 6, 23, 0.88);
+            backdrop-filter: blur(6px);
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-blue-500 selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-40 glass-card border-b border-slate-800">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#" class="text-xl font-bold tracking-wider text-blue-400">A. HSSINI</a>
+                <div class="hidden md:flex space-x-8 text-sm font-medium text-slate-300">
+                    <a href="#profil" class="hover:text-blue-400 transition">Profil</a>
+                    <a href="#competences" class="hover:text-blue-400 transition">Compétences</a>
+                    <a href="#projets" class="hover:text-blue-400 transition">Projets</a>
+                    <a href="#loisirs" class="hover:text-blue-400 transition">Loisirs & Arbitrage</a>
+                    <a href="#contact" class="hover:text-blue-400 transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero / En-tête -->
+    <section id="profil" class="pt-32 pb-20 px-4 max-w-6xl mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="flex-1 space-y-6">
+                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-sm font-medium">
+                    <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                    Recherche de stage (8 à 12 semaines) — Secteur Bordeaux ou Mont-de-Marsan
+                </div>
+                <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight">
+                    Abdessamad <span class="text-blue-400">HSSINI</span>
+                </h1>
+                <h2 class="text-xl md:text-2xl text-slate-300 font-medium">
+                    Étudiant en 2<sup>ème</sup> année de BUT Informatique — Parcours A (Réalisation d'applications)
+                </h2>
+                <p class="text-slate-400 leading-relaxed max-w-2xl">
+                    Actuellement en formation à l'IUT de Bordeaux (Gradignan), je recherche un stage de 8 à 12 semaines en informatique (développement web/logiciel, administration système &amp; réseaux, bases de données) dans la région de <strong class="text-slate-200">Bordeaux</strong> ou de <strong class="text-slate-200">Mont-de-Marsan</strong>. Rigoureux et polyvalent, je souhaite mettre mes compétences techniques au service d'une équipe dynamique.
+                </p>
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#contact" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition shadow-lg shadow-blue-600/20">
+                        Me contacter
+                    </a>
+                    <a href="#projets" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-slate-200 font-semibold border border-slate-700 transition">
+                        Explorer mes projets
+                    </a>
+                </div>
+            </div>
+
+            <!-- Carte d'infos rapides avec photo -->
+            <div class="w-full md:w-80 glass-card rounded-2xl p-6 space-y-5">
+                <div class="w-32 h-32 mx-auto rounded-full overflow-hidden border-2 border-blue-500/50 shadow-lg bg-slate-800">
+                    <img src="moi.jpg" alt="Abdessamad HSSINI" class="w-full h-full object-cover object-top cursor-pointer" onclick="openLightbox(['moi.jpg'], 0)">
+                </div>
+
+                <div class="border-t border-slate-700/50 pt-4">
+                    <ul class="space-y-3 text-sm text-slate-300">
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-graduation-cap text-blue-400 w-5"></i>
+                            <span>BUT Informatique (2<sup>e</sup> année)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-map-marker-alt text-blue-400 w-5"></i>
+                            <span>Bordeaux (33) • Mont-de-Marsan (40)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-language text-blue-400 w-5"></i>
+                            <span>Français (C2), Espagnol (C2), Anglais (B1/B2)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-car text-blue-400 w-5"></i>
+                            <span>Permis B (véhiculé)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fas fa-whistle text-blue-400 w-5"></i>
+                            <span>Arbitre officiel FFF (Gironde)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Techniques -->
+    <section id="competences" class="py-16 px-4 max-w-6xl mx-auto border-t border-slate-800/80">
+        <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
+            <span class="w-8 h-1 bg-blue-500 rounded"></span>
+            Compétences Techniques
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div class="glass-card p-6 rounded-xl space-y-3">
+                <div class="text-blue-400 text-2xl"><i class="fas fa-code"></i></div>
+                <h3 class="font-bold text-lg">Développement</h3>
+                <p class="text-sm text-slate-400">Java (POO, JavaFX, JUnit, JGraphT), C#, C (système Unix), Python, Assembleur PowerPC.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl space-y-3">
+                <div class="text-cyan-400 text-2xl"><i class="fas fa-database"></i></div>
+                <h3 class="font-bold text-lg">Web &amp; Bases de Données</h3>
+                <p class="text-sm text-slate-400">HTML5, CSS3, JavaScript, PHP, SQL, PostgreSQL, MySQL, Oracle SQL, Pandas.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl space-y-3">
+                <div class="text-emerald-400 text-2xl"><i class="fas fa-terminal"></i></div>
+                <h3 class="font-bold text-lg">Systèmes &amp; Réseaux</h3>
+                <p class="text-sm text-slate-400">Scripting Bash / Shell, Linux (Debian/VM), Windows (PowerShell), SSH, HTTPS, Wireshark.</p>
+            </div>
+            <div class="glass-card p-6 rounded-xl space-y-3">
+                <div class="text-purple-400 text-2xl"><i class="fas fa-project-diagram"></i></div>
+                <h3 class="font-bold text-lg">Outils &amp; Méthodologie</h3>
+                <p class="text-sm text-slate-400">Git / GitHub / GitLab, Méthode Merise (MCD/MLD), UML, BPMN, Figma, Agile / Scrum.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Universitaires Cliquables -->
+    <section id="projets" class="py-16 px-4 max-w-6xl mx-auto border-t border-slate-800/80">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
+            <div>
+                <h2 class="text-3xl font-bold mb-2 flex items-center gap-3">
+                    <span class="w-8 h-1 bg-blue-500 rounded"></span>
+                    Projets Universitaires (SAÉ &amp; RETEX)
+                </h2>
+                <p class="text-slate-400">Cliquez sur une image pour l'agrandir ou sur un projet pour consulter ses détails, l'organisation du travail et les compétences acquises.</p>
+            </div>
+        </div>
+
+        <!-- Grille des projets générée dynamiquement -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Injecté par JavaScript -->
+        </div>
+    </section>
+
+    <!-- Loisirs & Arbitrage -->
+    <section id="loisirs" class="py-16 px-4 max-w-6xl mx-auto border-t border-slate-800/80">
+        <h2 class="text-3xl font-bold mb-10 flex items-center gap-3">
+            <span class="w-8 h-1 bg-emerald-500 rounded"></span>
+            Loisirs &amp; Engagement Sportif
+        </h2>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+            <!-- Arbitrage détaillé -->
+            <div class="lg:col-span-2 glass-card p-6 sm:p-8 rounded-2xl border-l-4 border-l-emerald-500 space-y-5">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <div>
+                        <span class="text-xs font-semibold uppercase tracking-wider text-emerald-400">Arbitrage de football</span>
+                        <h3 class="text-2xl font-bold text-white mt-1">Arbitre Officiel — District de la Gironde de Football (FFF)</h3>
+                    </div>
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-400 text-xs font-semibold">
+                        Depuis Février 2026
+                    </span>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm bg-slate-900/60 p-4 rounded-xl border border-slate-800">
+                    <div>
+                        <p class="text-slate-400 text-xs uppercase font-semibold">Status</p>
+                        <p class="text-slate-200 font-medium mt-1">Arbitre officiel départemental (FFF / District de la Gironde)</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-400 text-xs uppercase font-semibold">Club couvert</p>
+                        <p class="text-slate-200 font-medium mt-1">FC BIGANOS</p>
+                    </div>
+                    <div>
+                        <p class="text-slate-400 text-xs uppercase font-semibold">Niveau de matchs arbitrés</p>
+                        <p class="text-slate-200 font-medium mt-1">Championnats jeunes régionaux (assistant) et départementaux (central), et Coupe de Gironde/Aquitaine jeunes</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold text-white mb-3">Compétences transmises sur le terrain :</h4>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                            <span>Prise de décision rapide, claire et assumée</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                            <span>Communication assertive, écoute et pédagogie auprès des acteurs</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                            <span>Rigueur dans l'application des règles et du cadre réglementaire</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <i class="fas fa-check-circle text-emerald-400 mt-1"></i>
+                            <span>Maîtrise de soi, sang-froid et gestion des échanges tendus</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Autres loisirs -->
+            <div class="glass-card p-6 sm:p-8 rounded-2xl space-y-5 flex flex-col justify-between">
+                <div class="space-y-4">
+                    <h3 class="text-xl font-bold text-white flex items-center gap-2">
+                        <i class="fas fa-running text-blue-400"></i> Autres loisirs
+                    </h3>
+                    <ul class="space-y-4 text-sm text-slate-300">
+                        <li class="space-y-1">
+                            <p class="font-semibold text-white">Pratique du football et course à pied</p>
+                            <p class="text-slate-400">Entretien de l'endurance, régularité sportive et goût de l'effort collectif.</p>
+                        </li>
+                        <li class="space-y-1">
+                            <p class="font-semibold text-white">Mécanique et entretien (automobile et trottinettes électriques)</p>
+                            <p class="text-slate-400">Diagnostic de pannes, réglage et maintenance pratique au quotidien.</p>
+                        </li>
+                        <li class="space-y-1">
+                            <p class="font-semibold text-white">Jeux de réflexion et logique</p>
+                            <p class="text-slate-400">Déduction, analyse d'indices et résolution de problèmes.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="py-20 px-4 max-w-4xl mx-auto text-center border-t border-slate-800/80">
+        <h2 class="text-3xl font-bold mb-4">Me Contacter</h2>
+        <p class="text-slate-400 mb-8 max-w-xl mx-auto">
+            Disponible pour un entretien concernant un stage de 8 à 12 semaines dans le domaine de l'informatique, sur le secteur de Bordeaux ou de Mont-de-Marsan.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a  class="px-6 py-3 rounded-lg bg-blue-900 hover:bg-blue-900 text-white font-semibold transition flex items-center gap-2">
+                <i class="fas fa-envelope"></i>
+                <span>hssini.abdessamad.stage@gmail.com</span>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="px-6 py-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-slate-700 transition flex items-center gap-2">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="CV-Abdessamad-HSSINI.pdf" target="_blank" rel="noopener noreferrer" class="px-6 py-3 rounded-lg bg-blue-600 hover:bg-blue-500 text-white font-semibold transition flex items-center gap-2 shadow-lg shadow-blue-600/20">
+                <i class="fas fa-file-pdf"></i>
+                <span>Consulter mon CV</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 text-center text-sm text-slate-500 border-t border-slate-800/80">
+        <p>© 2026 Abdessamad HSSINI — Portfolio Étudiant BUT Informatique</p>
+    </footer>
+
+    <!-- Modale Détails Projet -->
+    <div id="project-modal" class="fixed inset-0 z-50 hidden modal-backdrop flex items-center justify-center p-4 overflow-y-auto">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl max-w-2xl w-full overflow-hidden shadow-2xl transform transition-all my-8">
+            <!-- Galerie d'images cliquables -->
+            <div class="relative bg-slate-800 p-3">
+                <div id="modal-gallery" class="grid gap-2"></div>
+                <button onclick="closeModal()" class="absolute top-5 right-5 w-10 h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 transition">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- Contenu de la modale -->
+            <div class="p-6 sm:p-8 space-y-6">
+                <div class="flex flex-wrap items-center justify-between gap-2">
+                    <span id="modal-category" class="px-3 py-1 rounded-full bg-blue-600/90 text-white text-xs font-semibold uppercase tracking-wider"></span>
+                    <span id="modal-mode" class="px-3 py-1 rounded-full bg-slate-800/90 border border-slate-600 text-slate-200 text-xs font-medium flex items-center gap-1.5"></span>
+                </div>
+
+                <div>
+                    <h3 id="modal-title" class="text-2xl font-bold text-white mb-2"></h3>
+                    <p id="modal-description" class="text-slate-300 text-sm leading-relaxed"></p>
+                </div>
+
+                <!-- Résultats / KPI -->
+                <div class="bg-slate-800/60 border border-slate-700/60 rounded-xl p-4">
+                    <h4 class="text-xs font-semibold uppercase tracking-wider text-blue-400 mb-2 flex items-center gap-2">
+                        <i class="fas fa-trophy"></i> Résultats &amp; Objectifs atteints
+                    </h4>
+                    <p id="modal-results" class="text-sm text-slate-300"></p>
+                </div>
+
+                <!-- Compétences Techniques & Savoir-être -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-2">
+                    <div>
+                        <h4 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fas fa-laptop-code text-blue-400"></i> Compétences Techniques
+                        </h4>
+                        <ul id="modal-tech-skills" class="space-y-2 text-sm text-slate-300"></ul>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white mb-3 flex items-center gap-2">
+                            <i class="fas fa-user-check text-emerald-400"></i> Savoir-être &amp; Compétences Comportementales
+                        </h4>
+                        <ul id="modal-soft-skills" class="space-y-2 text-sm text-slate-300"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lightbox pour agrandir les images -->
+    <div id="lightbox-modal" class="fixed inset-0 z-[60] hidden modal-backdrop flex items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-5 right-5 w-11 h-11 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 transition">
+            <i class="fas fa-times text-lg"></i>
+        </button>
+        <button id="lightbox-prev" onclick="changeLightboxImage(-1)" class="hidden absolute left-4 sm:left-8 w-11 h-11 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 transition">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <img id="lightbox-img" src="" alt="Image agrandie" class="max-h-[88vh] max-w-[92vw] object-contain rounded-xl shadow-2xl border border-slate-700/60">
+        <button id="lightbox-next" onclick="changeLightboxImage(1)" class="hidden absolute right-4 sm:right-8 w-11 h-11 rounded-full bg-slate-900/90 hover:bg-slate-800 text-white flex items-center justify-center border border-slate-700 transition">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+    </div>
+
+    <!-- Script des données et interactions -->
+    <script>
+        const projects = [
+            {
+                id: 1,
+                category: "Programmation Orientée Objet • Java / JavaFX",
+                title: "Jeu de Labyrinthe Multi-Étages 2D",
+                mode: "Projet individuel",
+                modeIcon: "fa-user",
+                images: ["reprise.png" , "reprise2.png"],
+                shortDesc: "Développement en Java et JavaFX d'un jeu de labyrinthe multi-étages intégrant déplacements fluides, monstres autonomes, éclairage localisé et calcul de plus courts chemins.",
+                fullDesc: "Projet individuel réalisé dans le cadre de la SAÉ 3.5 : conception d'une application complète de labyrinthe multi-étages en respectant strictement des interfaces logicielles imposées. Mise en place de l'architecture orientée objet (héritage, classes abstraites et polymorphisme pour le héros et les monstres), gestion des entrées clavier, déplacements graphiques fluides pixel par pixel, éclairage dynamique autour du joueur et modélisation sous forme de graphe avec la bibliothèque JGraphT (algorithme de Dijkstra pour l'aide à la navigation et la poursuite par un dragon).",
+                results: "Application JavaFX fonctionnelle sans avertissement de compilation, gestion multi-thread sécurisée (CopyOnWriteArrayList) et validation des chemins par tests unitaires JUnit.",
+                tags: ["Java", "JavaFX", "JUnit"],
+                techSkills: [
+                    "Architecture Orientée Objet (interfaces, classes abstraites, polymorphisme)",
+                    "Développement d'interface graphique 2D et gestion événementielle (JavaFX)",
+                    "Modélisation de graphes et algorithme de Dijkstra (bibliothèque JGraphT)",
+                    "Gestion de la concurrence (CopyOnWriteArrayList) et tests unitaires JUnit"
+                ],
+                softSkills: [
+                    "Autonomie complète sur un cahier des charges technique structuré",
+                    "Rigueur dans le respect des contrats d'interfaces et de la documentation",
+                    "Persévérance et méthodologie dans la résolution de problèmes algorithmiques"
+                ]
+            },
+            {
+                id: 2,
+                category: "Système & Automatisation",
+                title: "Infrastructure Collaborative & Déploiement VM en Bash",
+                mode: "Projet en équipe",
+                modeIcon: "fa-users",
+                images: ["debian.png"],
+                shortDesc: "Automatisation par scripts Bash/Shell du déploiement et de la sécurisation d'une machine virtuelle Linux hébergeant Nextcloud et OnlyOffice.",
+                fullDesc: "Conception et écriture de scripts d'automatisation en Bash/Shell afin de monter, configurer et sécuriser un environnement virtuel Linux (Debian) sans intervention manuelle. Déploiement d'une suite collaborative complète (Nextcloud et OnlyOffice) accessible en HTTPS avec double authentification.",
+                results: "Déploiement complet automatisé en moins de 2 minutes, gestion automatisée des droits utilisateurs (chmod, SSH) et services opérationnels.",
+                tags: ["Bash / Shell", "Linux Debian", "VirtualBox", "HTTPS / SSH"],
+                techSkills: [
+                    "Écriture de scripts d'automatisation Bash / Shell",
+                    "Administration système Linux et gestion des droits (SSH, chmod)",
+                    "Déploiement et configuration réseau de machines virtuelles",
+                    "Sécurisation des accès (HTTPS, 2FA)"
+                ],
+                softSkills: [
+                    "Rigueur méthodologique et sens de l'optimisation",
+                    "Répartition efficace des tâches techniques en équipe",
+                    "Résolution méthodique d'incidents système"
+                ]
+            },
+            {
+                id: 3,
+                category: "Développement Java & IoT",
+                title: "Station Météo Connectée (IoT)",
+                mode: "Deux phases : individuelle puis en équipe",
+                modeIcon: "fa-user-friends",
+                images: ["odomo.jpg", "odomo2.png"],
+                shortDesc: "Projet réalisé en deux étapes (une première partie individuelle puis une seconde en équipe) autour d'une application Java de suivi météo.",
+                fullDesc: "Projet structuré en deux phases : une première phase menée individuellement, suivie d'une phase collaborative en équipe. Reprise d'une base de code existante, correction d'anomalies, implémentation des modules manquants pour traiter les données météo et application de patrons de conception (Design Patterns) avec tests unitaires.",
+                results: "Couverture de tests unitaires supérieure à 80 % sous JUnit et traitement fluide des données sans interruption.",
+                tags: ["Java", "POO", "JUnit", "Design Patterns"],
+                techSkills: [
+                    "Programmation Orientée Objet avancée en Java",
+                    "Refactoring et maintenance de code existant",
+                    "Implémentation de Design Patterns (Observer)",
+                    "Tests unitaires automatisés avec JUnit"
+                ],
+                softSkills: [
+                    "Autonomie lors de la phase individuelle",
+                    "Coordination et intégration du travail lors de la phase en équipe",
+                    "Souci de la qualité et de la fiabilité logicielle"
+                ]
+            },
+            {
+                id: 4,
+                category: "Développement Java",
+                title: "Éditeur Interactif de Graphes",
+                mode: "Projet en équipe",
+                modeIcon: "fa-users",
+                images: ["graphes.jpg"],
+                shortDesc: "Conception d'une application graphique en Java permettant de créer, manipuler et visualiser des graphes de manière interactive.",
+                fullDesc: "Développement d'un outil complet d'édition de graphes en Java. Intégration de fonctionnalités avancées : ajout dynamique de sommets et d'arêtes, zoom fluide, personnalisation visuelle et système complet d'historique Annuler/Rétablir.",
+                results: "Interface fluide et intuitive respectant les critères d'ergonomie et validée lors de la démonstration.",
+                tags: ["Java", "IHM / JavaFX", "Algorithmes", "Git"],
+                techSkills: [
+                    "Conception d'interfaces graphiques (IHM) en Java",
+                    "Modélisation de structures de données (graphes, piles d'historique)",
+                    "Gestion événementielle (souris, clavier, zoom)",
+                    "Maquettage préliminaire sous Figma"
+                ],
+                softSkills: [
+                    "Sens de l'ergonomie et de l'expérience utilisateur",
+                    "Coordination et suivi d'avancement en équipe",
+                    "Présentation et démonstration produit"
+                ]
+            },
+            {
+                id: 5,
+                category: "Web & Refactorisation",
+                title: "Refactorisation Moderne d'un Site Web",
+                mode: "Projet individuel",
+                modeIcon: "fa-user",
+                images: ["sites.png", "sites2.png"],
+                shortDesc: "Projet réalisé seul consistant à moderniser l'architecture, la mise en page et l'ergonomie d'un site web existant.",
+                fullDesc: "Projet mené en autonomie complète (tout seul) : restructuration de la mise en page d'un site existant (en-tête, navigation, colonne latérale, zone principale et pied de page) vers un rendu moderne, structuré et soigné, avec intégration de pages et fonctionnalités clés.",
+                results: "Refonte visuelle nette et structurée, navigation claire et 100 % des fonctionnalités demandées opérationnelles.",
+                tags: ["HTML5 / CSS3", "Mise en page", "Autonomie"],
+                techSkills: [
+                    "Refactorisation sémantique HTML5 et stylisation moderne CSS3",
+                    "Structuration de mises en page responsives et hiérarchisées",
+                    "Intégration de fonctionnalités interactives côté client",
+                    "Amélioration de la lisibilité et de la maintenabilité du code"
+                ],
+                softSkills: [
+                    "Autonomie complète et gestion du temps en solo",
+                    "Esprit critique face à une structure existante à améliorer",
+                    "Rigueur dans la finition visuelle"
+                ]
+            },
+            {
+                id: 6,
+                category: "Data & Programmation",
+                title: "Étude Climatique Nouvelle-Aquitaine",
+                mode: "Projet en équipe",
+                modeIcon: "fa-users",
+                images: ["climat.jpg"],
+                shortDesc: "Traitement, croisement et visualisation de données météorologiques et de catastrophes naturelles en Python et C#.",
+                fullDesc: "Exploitation des données météorologiques et de risques naturels à l'échelle de la Nouvelle-Aquitaine. Nettoyage et analyse en Python, couplés à un développement en C# pour traiter et restituer les informations.",
+                results: "Production d'analyses fiables et de représentations visuelles permettant d'observer les disparités territoriales.",
+                tags: ["Python", "C#", "Données", "Visualisation"],
+                techSkills: [
+                    "Nettoyage et manipulation de jeux de données en Python",
+                    "Développement applicatif en C#",
+                    "Croisement et structuration de données",
+                    "Restitution graphique et cartographique"
+                ],
+                softSkills: [
+                    "Esprit d'analyse et synthèse de données",
+                    "Communication claire des résultats",
+                    "Organisation méthodique en équipe"
+                ]
+            },
+            {
+                id: 7,
+                category: "Bases de Données",
+                title: "Modélisation & Implémentation BDD Relationnelle",
+                mode: "Projet en équipe",
+                modeIcon: "fa-users",
+                images: ["mcd.jpg"],
+                shortDesc: "Conception complète (MCD/MLD) selon la méthode Merise et optimisation de requêtes SQL complexes.",
+                fullDesc: "Analyse des besoins d'un client fictif, élaboration du modèle conceptuel (MCD) et logique (MLD) sans redondance, création des tables relationnelles et écriture de requêtes métiers complexes (jointures multiples, agrégations).",
+                results: "Respect strict des formes normales (zéro redondance) et requêtes métiers fonctionnelles et optimisées.",
+                tags: ["SQL", "MySQL", "MCD / MLD"],
+                techSkills: [
+                    "Modélisation conceptuelle et logique (MCD / MLD)",
+                    "Implémentation relationnelle et clés étrangères",
+                    "Écriture et optimisation de requêtes SQL (jointures, agrégations)",
+                    "Garantie de l'intégrité des données"
+                ],
+                softSkills: [
+                    "Structuration logique de l'information",
+                    "Travail collaboratif et partage de schéma",
+                    "Rigueur dans la validation des règles de gestion"
+                ]
+            },
+            {
+                id: 8,
+                category: "Audit & Conseil SI",
+                title: "Diagnostic & Conseil SI — Chantiers Navals Couach",
+                mode: "Projet en équipe",
+                modeIcon: "fa-users",
+                images: ["couach.jpg"],
+                shortDesc: "Analyse stratégique des besoins numériques et préconisations d'évolution du Système d'Information d'une entreprise industrielle.",
+                fullDesc: "Étude de l'organisation et des enjeux des chantiers navals Couach. Réalisation d'une analyse SWOT, cartographie des processus et rédaction d'un dossier de conseil comprenant des préconisations logicielles et une feuille de route de déploiement.",
+                results: "Livrable d'analyse stratégique complet aligné avec les contraintes budgétaires et métiers de l'entreprise.",
+                tags: ["Analyse SWOT", "Gestion de projet", "Conseil"],
+                techSkills: [
+                    "Cartographie des processus et analyse du Système d'Information",
+                    "Diagnostic stratégique (Analyse SWOT)",
+                    "Rédaction de préconisations et feuille de route",
+                    "Prise en compte des contraintes budgétaires et métiers"
+                ],
+                softSkills: [
+                    "Vision globale des enjeux d'une entreprise",
+                    "Rédaction structurée et esprit de synthèse",
+                    "Argumentation et communication professionnelle"
+                ]
+            }
+        ];
+
+        // Génération des cartes projets
+        const grid = document.getElementById('projects-grid');
+        projects.forEach(project => {
+            const card = document.createElement('div');
+            card.className = "glass-card rounded-xl overflow-hidden flex flex-col justify-between hover:border-blue-500/60 hover:-translate-y-1 transition duration-300 group";
+
+            const thumbsHtml = project.images.length > 1
+                ? `<div class="grid grid-cols-2 gap-1.5 h-44 w-full bg-slate-800 p-1.5">
+                        ${project.images.map((img, idx) => `
+                            <div class="relative h-full w-full overflow-hidden rounded-lg cursor-zoom-in" onclick="event.stopPropagation(); openLightbox(${JSON.stringify(project.images).replace(/"/g, '&quot;')}, ${idx})">
+                                <img src="${img}" alt="${project.title} - image ${idx + 1}" class="w-full h-full object-cover hover:scale-105 transition duration-300" title="Cliquer pour agrandir">
+                            </div>
+                        `).join('')}
+                   </div>`
+                : `<div class="relative h-44 w-full overflow-hidden bg-slate-800 cursor-zoom-in" onclick="event.stopPropagation(); openLightbox(${JSON.stringify(project.images).replace(/"/g, '&quot;')}, 0)">
+                        <img src="${project.images[0]}" alt="${project.title}" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" title="Cliquer pour agrandir" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80'">
+                   </div>`;
+
+            card.innerHTML = `
+                <div>
+                    <div class="relative">
+                        ${thumbsHtml}
+                        <span class="pointer-events-none absolute top-3 right-3 px-2.5 py-1 rounded-md bg-slate-900/85 backdrop-blur-sm text-xs text-slate-200 border border-slate-700/80 flex items-center gap-1.5">
+                            <i class="fas ${project.modeIcon} text-blue-400"></i> ${project.mode}
+                        </span>
+                    </div>
+                    <div class="p-6 space-y-3 cursor-pointer" onclick="openModal(${project.id})">
+                        <div class="text-xs text-blue-400 font-semibold uppercase tracking-wider">
+                            ${project.category}
+                        </div>
+                        <h3 class="text-xl font-bold group-hover:text-blue-400 transition">${project.title}</h3>
+                        <p class="text-sm text-slate-400 leading-relaxed line-clamp-3">
+                            ${project.shortDesc}
+                        </p>
+                    </div>
+                </div>
+                <div class="px-6 pb-6 cursor-pointer" onclick="openModal(${project.id})">
+                    <div class="pt-4 border-t border-slate-700/50 flex items-center justify-between">
+                        <div class="flex flex-wrap gap-1.5">
+                            ${project.tags.slice(0, 3).map(tag => `<span class="px-2 py-0.5 rounded bg-slate-800 text-slate-300 text-xs">${tag}</span>`).join('')}
+                        </div>
+                        <span class="text-xs font-semibold text-blue-400 group-hover:translate-x-1 transition flex items-center gap-1">
+                            Détails <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </div>
+                </div>
+            `;
+            grid.appendChild(card);
+        });
+
+        // Ouverture de la modale projet
+        function openModal(id) {
+            const project = projects.find(p => p.id === id);
+            if (!project) return;
+
+            const gallery = document.getElementById('modal-gallery');
+            gallery.className = project.images.length > 1 ? "grid grid-cols-1 sm:grid-cols-2 gap-2" : "grid grid-cols-1";
+            gallery.innerHTML = project.images.map((img, idx) => `
+                <img src="${img}" alt="${project.title}" onclick="openLightbox(${JSON.stringify(project.images).replace(/"/g, '&quot;')}, ${idx})" class="w-full h-52 object-cover rounded-xl cursor-zoom-in hover:opacity-90 transition" title="Cliquer pour agrandir" onerror="this.src='https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80'">
+            `).join('');
+
+            document.getElementById('modal-category').textContent = project.category;
+            document.getElementById('modal-mode').innerHTML = `<i class="fas ${project.modeIcon} text-blue-400"></i> ${project.mode}`;
+            document.getElementById('modal-title').textContent = project.title;
+            document.getElementById('modal-description').textContent = project.fullDesc;
+            document.getElementById('modal-results').textContent = project.results;
+
+            const techList = document.getElementById('modal-tech-skills');
+            techList.innerHTML = project.techSkills.map(skill => `
+                <li class="flex items-start gap-2">
+                    <i class="fas fa-check text-blue-400 mt-1 text-xs"></i>
+                    <span>${skill}</span>
+                </li>
+            `).join('');
+
+            const softList = document.getElementById('modal-soft-skills');
+            softList.innerHTML = project.softSkills.map(skill => `
+                <li class="flex items-start gap-2">
+                    <i class="fas fa-check text-emerald-400 mt-1 text-xs"></i>
+                    <span>${skill}</span>
+                </li>
+            `).join('');
+
+            document.getElementById('project-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            document.getElementById('project-modal').classList.add('hidden');
+            if (document.getElementById('lightbox-modal').classList.contains('hidden')) {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        // Lightbox (agrandissement d'image)
+        let currentLightboxImages = [];
+        let currentLightboxIndex = 0;
+
+        function openLightbox(images, index) {
+            currentLightboxImages = images;
+            currentLightboxIndex = index;
+            updateLightbox();
+            document.getElementById('lightbox-modal').classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function updateLightbox() {
+            const imgEl = document.getElementById('lightbox-img');
+            imgEl.src = currentLightboxImages[currentLightboxIndex];
+            imgEl.onerror = function() {
+                this.src = 'https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=900&q=80';
+            };
+            const prevBtn = document.getElementById('lightbox-prev');
+            const nextBtn = document.getElementById('lightbox-next');
+            if (currentLightboxImages.length > 1) {
+                prevBtn.classList.remove('hidden');
+                nextBtn.classList.remove('hidden');
+            } else {
+                prevBtn.classList.add('hidden');
+                nextBtn.classList.add('hidden');
+            }
+        }
+
+        function changeLightboxImage(step) {
+            currentLightboxIndex = (currentLightboxIndex + step + currentLightboxImages.length) % currentLightboxImages.length;
+            updateLightbox();
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox-modal').classList.add('hidden');
+            if (document.getElementById('project-modal').classList.contains('hidden')) {
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        document.getElementById('project-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeModal();
+        });
+        document.getElementById('lightbox-modal').addEventListener('click', function(e) {
+            if (e.target === this) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                if (!document.getElementById('lightbox-modal').classList.contains('hidden')) {
+                    closeLightbox();
+                } else {
+                    closeModal();
+                }
+            } else if (!document.getElementById('lightbox-modal').classList.contains('hidden')) {
+                if (e.key === 'ArrowRight') changeLightboxImage(1);
+                if (e.key === 'ArrowLeft') changeLightboxImage(-1);
+            }
+        });
+    </script>
+
+</body>
+</html>
